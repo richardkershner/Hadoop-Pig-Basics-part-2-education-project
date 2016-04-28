@@ -6,6 +6,7 @@
 * non-conforming characters need to be removed.  In this case, all the rows that have numbers need all commas and dollar signs removed.  Also, a weird '-' like character is used instead of null which was also deleted.
 > 
 ##Upload the edited .csv file##
+* change directory on client machine to where occupation.csv is
 * $ hadoop fs -mkdir education
 * $ hadoop fs -mkdir education
 * $ hadoop fs -put occupation.csv education

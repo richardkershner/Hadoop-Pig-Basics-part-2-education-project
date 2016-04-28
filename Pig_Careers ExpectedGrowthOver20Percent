@@ -1,0 +1,22 @@
+grunt> mychart = Load '/user/cloudera/education/occupation.csv' USING PigStorage('\t') AS (title:chararray, codej:chararray, type:chararray, emp_2014:double, emp_2024:double, empchangenum:double, empchangeperc:double, selfempperc:double, jobopennings:double, wage:double, educ:chararray, workexp:chararray, jobtraining:chararray);
+
+grunt> mychart = FILTER mychart BY emp_2024 is not null AND emp_2024 is not null and (emp_2024- emp_2014)/ emp_2014 > .2 AND type == 'Line item';
+  #This can also be done individually or broken into parts#
+    grunt> mychart = FILTER mychart BY emp_2014 is not null;
+    grunt> mychart = FILTER mychart BY emp_2024 is not null;
+    grunt> mychart = FILTER mychart BY (emp_2024- emp_2014)/ emp_2014 > .2;
+    grunt> mychart = FILTER mychart BY type == 'Line item';
+grunt> dump;
+
+OR replace dump; for counting the total
+  grunt> mygroup = GROUP mychart ALL;
+  grunt> mycount = FOREACH mygroup GENERATE COUNT(mychart);
+  grunt> dump; > count = 51
+  
+OR for less detail and an easier read
+  grunt> finallist = FOREACH mychart GENERATE title, ((emp_2024- emp_2014)/ emp_2014*100) as perc:double;
+  grunt> dump;
+  
+OR for personal interest, include wage and education
+  grunt> finallist = FOREACH mychart GENERATE title, wage, ((emp_2024- emp_2014)/ emp_2014*100) as perc:double, educ;
+  dump;

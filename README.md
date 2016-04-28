@@ -1,6 +1,10 @@
 # Hadoop-Pig-Basics-part-2-education-project
 ##This is a brief look, question 1, at a separate project from the Hadoop class.##
-
+> 
+##Edit the original file and safe as a tab seperated .csv file##
+* note top header rows and bottom footer rows must be deleted before converting.
+* non-conforming characters need to be removed.  In this case, all the rows that have numbers need all commas and dollar signs removed.
+> 
 ##Upload the edited .csv file##
 * $ hadoop fs -mkdir education
 * $ hadoop fs -mkdir education

@@ -1,8 +1,11 @@
-Edit the original file and safe as a tab seperated .csv file
+Downloaded data is from the .gov census on job projections and wage
+Download: http://www.bls.gov/emp/ep_table_111.htm 
 
-note top header rows and bottom footer rows must be deleted before converting.
-non-conforming characters need to be removed. In this case, all the rows that have numbers need all commas and dollar signs removed. Also, a weird '-' like character is used instead of null which was also deleted.
-Upload the edited .csv file
+**Edit the original file and save as a tab seperated .csv file**
+   Top header rows and bottom footer rows must be deleted.
+   non-conforming characters need to be removed. 
+      Numberical columns remove: commas, dollar signs and weird '-' like character is used instead of null.
+   Upload the edited .csv file
 
 change directory on client machine to where occupation.csv is
 $ hadoop fs -mkdir education

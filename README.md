@@ -1,8 +1,10 @@
 # Exploring Data via-Hadoop-Pig-Basics-part-2-education-project
 ##This is a brief look, question 1, at a separate project from the Hadoop class.##
 > 
-##Edit the original file and safe as a tab seperated .csv file##
+* download site:http://www.bls.gov/emp/ep_table_111.htm 
+* This is then saved after formatting into occupation.csv
 * see -> Data Preperation
+
  
 ##Upload the edited .csv file##
 * change directory on client machine to where occupation.csv is

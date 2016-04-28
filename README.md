@@ -3,7 +3,7 @@
 > 
 ##Edit the original file and safe as a tab seperated .csv file##
 * note top header rows and bottom footer rows must be deleted before converting.
-* non-conforming characters need to be removed.  In this case, all the rows that have numbers need all commas and dollar signs removed.
+* non-conforming characters need to be removed.  In this case, all the rows that have numbers need all commas and dollar signs removed.  Also, a weird '-' like character is used instead of null which was also deleted.
 > 
 ##Upload the edited .csv file##
 * $ hadoop fs -mkdir education

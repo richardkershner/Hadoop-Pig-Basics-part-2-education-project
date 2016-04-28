@@ -1,10 +1,11 @@
 # Hadoop-Pig-Basics-part-2-education-project
-This is a brief look at a separate project from the Hadoop class.
+##This is a brief look at a separate project from the Hadoop class.##
 
-$ hadoop fs -mkdir education
-$ hadoop fs -mkdir education
-$ hadoop fs -put occupation2.csv education
-$ pig -x mapred;
+##Upload the edited .csv file##
+> $ hadoop fs -mkdir education
+> $ hadoop fs -mkdir education
+> $ hadoop fs -put occupation2.csv education
+> $ pig -x mapred;
 
 List all occupations that are expected to grow by over 20% by 2022. 
 grunt> mychart = Load '/user/cloudera/education/occupation2.csv' USING PigStorage('\t') AS (title:chararray, codej:chararray, type:chararray, emp_2014:double, emp_2024:double, empchangenum:double, empchangeperc:double, selfempperc:double, jobopennings:double, wage:double, educ:chararray, workexp:chararray, jobtraining:chararray);

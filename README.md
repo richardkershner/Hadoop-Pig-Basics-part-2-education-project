@@ -31,3 +31,9 @@
 ##OR for less detail and an easier read##
 * grunt> finallist = FOREACH mychart GENERATE title, ((emp_2024- emp_2014)/ emp_2014*100)  as perc:double;
 * dump;
+* 
+
+##OR for personal interest, include wage and education##
+* grunt> finallist = FOREACH mychart GENERATE title, wage, ((emp_2024- emp_2014)/ emp_2014*100)  as perc:double, educ;
+* dump;
+* 
